@@ -45,7 +45,7 @@ begin
 						end if;
 					end if;
 				end if;
-			when HOMING => nextstate <= RESTING;
+			when HOMING => if(athome = '1') then nextstate <= RESTING; else nextstate <= HOMING; end if;
 			when MOVETOFOOD => 
 				if abovesearchth = '1' then nextstate <= HOMING;
 				elsif  abovesearchth = '0' then
@@ -63,7 +63,7 @@ begin
 				end if;
 			when MOVETOHOME =>
 				if athome = '1' then nextstate <= DEPOSIT;
-				elsif athome = '0' then nextstate <= MOVETOFOOD;
+				elsif athome = '0' then nextstate <= MOVETOHOME;
 				end if;
 			when DEPOSIT =>
 				if success = '1' then nextstate <= RESTING;

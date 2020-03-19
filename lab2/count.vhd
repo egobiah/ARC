@@ -14,7 +14,7 @@ architecture Behav of Count is
 begin
 	-- Calcul de l'état suivant
 	-- Comme on est en std_logic,"elsif ='0'" et non "else", car le signal peux avoir d'autre valeur
-	process (state, reset, clk, start)
+	process (state, start, c)
 	begin
 		case state is
 		when IDLE =>
@@ -33,7 +33,7 @@ begin
 	end process;
 	
 	-- MISE A JOUR DU REGISTRE D'ETAT	
-	process(reset, clk)
+	process(reset, clk, start)
 	begin
 		-- RESET : asynchrone haut
 		if reset = '1' then 
@@ -41,6 +41,9 @@ begin
 		-- HORLOGE : front montant 
 		elsif (clk'event and clk = '1') then
 			state <= nextstate;
+			if ( (start = '1') and (state = IDLE) )then
+				state <= COUNTING;
+			end if;
 		end if;
 	end process;
 	

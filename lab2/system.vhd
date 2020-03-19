@@ -23,15 +23,16 @@ architecture Struct of System is
 begin
 -- Count1
 	 C1: Count 
-	 generic map(3) -- Dois-je compter 4 front à la fin du start ou depuis le début du start
+	 generic map(4) 
 	 port map(reset,clk,link_rest,link_ab_reset);
 -- Count2	 
 	 C2: Count 
-	 generic map(9) -- Dois-je compter 10 front à la fin du start ou depuis le début du start
+	 generic map(10) 
 	 port map(reset,clk,link_search,link_ab_search);
 -- Robot	 
 	 R: Robot port map(reset, clk, athome, findfood, lostfood, closetofood, success, link_ab_reset, link_ab_search, scantimeup, link_rest, link_search, foodOut);
 	 
 	 food <= foodOut;
+	 
 
 end Struct;
