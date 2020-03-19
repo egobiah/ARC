@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Robot is
+	port(reset, clk, athome, findfood, lostfood, closetofood,
+	success, aboverestth, abovesearchth, scantimeup: in std_logic;
+	rest, search, food: out std_logic);
+end Robot;
+
+architecture automate_robot of Robot is
+
+	--type states is (IDLE, RESTING, RANDOMWALK, SCANAREA, HOMING, MOVETOFOOD,GRABFOOD, MOVETOHOME, DEPOSIT) ;
+	--Signal state, nextstate : states := IDLE;
+	-- Compute the next state 
+type my_state is (start, stop, ready, off, warmup);
+	Signal s : my_state;
+begin
+	
+	
+end automate_robot;
+
