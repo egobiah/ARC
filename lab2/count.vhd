@@ -41,14 +41,17 @@ begin
 		-- HORLOGE : front montant 
 		elsif (clk'event and clk = '1') then
 			state <= nextstate;
-			if ( (start = '1') and (state = IDLE) )then
+		-- Detecter un pic sur start
+		elsif ( (start = '1') and (state = IDLE) )then
 				state <= COUNTING;
-			end if;
+		
 		end if;
+		
+		
 	end process;
 	
-	-- MISE A JOUR A CHAQUE FRONT MONTANT DE LA CLOCK POUR C ou sur un reset
-	process(start, clk, c, reset)
+		-- MISE A JOUR A CHAQUE FRONT MONTANT DE LA CLOCK POUR C ou sur un reset
+	process(start, clk, reset)
 	begin
 		if(reset = '1') then
 			c <= 0;
@@ -56,7 +59,7 @@ begin
 		else 
 			if (clk'event and clk = '1') then
 				if (state = IDLE and start = '0') then 
-				
+					C <= 0;
 				elsif ( state = IDLE and start = '1') then
 					c <= c + 1;
 				elsif (state = COUNTING and c < threshold) then
@@ -68,8 +71,15 @@ begin
 		end if;
 	end process;
 	
-	-- Mise a jour de aboveth
-	aboveth <= '0' when c < threshold else '1';
+	-- Process d'Output
+
+	process(c)
+	begin
+		if  (c >= threshold) then
+			aboveth <= '1';
+		else aboveth <= '0';
+		end if;
+	end process;
 		
 end Behav;
 
