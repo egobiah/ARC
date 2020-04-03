@@ -19,7 +19,7 @@ begin
 	r <= '0', '1' after 44 ns, '0' after 45 ns, '1' after 84 ns, '0' after 85 ns, '1' after  144 ns, '0' after 145  ns,
 	'1' after 224 ns, '0' after  225 ns, '1' after  324 ns, '0' after 325  ns, '1' after  444 ns, '0' after 445  ns, '1' after  584 ns, '0' after  585 ns,
 	'1' after  684 ns, '0' after 685  ns, '1' after  804 ns, '0' after 805  ns, '1' after 904  ns, '0' after 905  ns, '1' after  984 ns, '0' after  985 ns,
-	'1' after 1064  ns, '0' after 1065  ns, '1' after 1204  ns, '0' after 1205  ns, '1' after 1340  ns, '0' after 1341  ns;
+	'1' after 1064  ns, '0' after 1065  ns, '1' after 1204  ns, '0' after 1205  ns, '1' after 1340  ns, '0' after 1341  ns, '1' after 1342 ns, '0' after 1343 ns;
 	-- manage clock
 	process	
 	begin

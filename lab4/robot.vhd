@@ -23,51 +23,56 @@ begin
 			when IDLE => nextstate <= RESTING;
 			when RESTING => 
 				if aboverestth = '1' then nextstate <= RANDOMWALK;
-				elsif aboverestth = '0' then nextstate <= RESTING;
+				else--elsif aboverestth = '0' then 
+				nextstate <= RESTING;
 				end if;
 				
 			when RANDOMWALK => 
 				if abovesearchth = '1' then nextstate <= HOMING;
-				elsif  abovesearchth = '0' then
+				else--  abovesearchth = '0' then
 					if findfood = '1' then nextstate <= MOVETOFOOD;
-					elsif findfood = '0' then
+					else--elsif findfood = '0' then
 						nextstate <= RANDOMWALK;
 					end if;
 				end if;
 				
 			when SCANAREA => 
 				if abovesearchth = '1' then nextstate <= HOMING;
-				elsif  abovesearchth = '0' then
+				else--elsif  abovesearchth = '0' then
 					if findfood = '1' then nextstate <= MOVETOFOOD;
-					elsif findfood = '0' then
+					else--elsif findfood = '0' then
 						if scantimeup = '1' then nextstate <= RANDOMWALK;
-						elsif scantimeup = '0' then nextstate <= SCANAREA; 
+						else--elsif scantimeup = '0' then 
+						nextstate <= SCANAREA; 
 						end if;
 					end if;
 				end if;
 			when HOMING => if(athome = '1') then nextstate <= RESTING; else nextstate <= HOMING; end if;
 			when MOVETOFOOD => 
 				if abovesearchth = '1' then nextstate <= HOMING;
-				elsif  abovesearchth = '0' then
+				else--elsif  abovesearchth = '0' then
 					if lostfood = '1' then nextstate <= SCANAREA;
-					elsif lostfood = '0' then
+					else--elsif lostfood = '0' then
 						if closetofood = '1' then nextstate <= GRABFOOD;
-						elsif closetofood = '0' then
+						else--elsif closetofood = '0' then
 							nextstate <= MOVETOFOOD; 
 						end if;
 					end if;
 				end if;
 			when GRABFOOD =>
 				if success = '1' then nextstate <= MOVETOHOME;
-				elsif success = '0' then nextstate <= GRABFOOD;
+				else--elsif success = '0' then
+				 nextstate <= GRABFOOD;
 				end if;
 			when MOVETOHOME =>
 				if athome = '1' then nextstate <= DEPOSIT;
-				elsif athome = '0' then nextstate <= MOVETOHOME;
+				else--elsif athome = '0' then
+				 nextstate <= MOVETOHOME;
 				end if;
 			when DEPOSIT =>
 				if success = '1' then nextstate <= RESTING;
-				elsif success = '0' then nextstate <= DEPOSIT;
+				else--elsif success = '0' then
+				 nextstate <= DEPOSIT;
 				end if;
 		end case;
 	end process;
