@@ -1,41 +1,24 @@
 Coverage Report Summary Data by file
 
 =================================================================================
-=== File: /tp/xm1iarc/xm1iarc003/Documents/ARC/lab4/count.vhd
+=== File: /tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab4/robot.vhd
 =================================================================================
     Enabled Coverage            Active      Hits    Misses % Covered
     ----------------            ------      ----    ------ ---------
-    Stmts                           17        17         0     100.0
-    Branches                        20        19         1      95.0
+    Stmts                           28        28         0     100.0
+    Branches                        43        43         0     100.0
+    FEC Condition Terms             11        11         0     100.0
     FSMs                                                       100.0
-        States                       2         2         0     100.0
-        Transitions                  4         4         0     100.0
+        States                       9         9         0     100.0
+        Transitions                 31        31         0     100.0
 
 =================================================================================
-=== File: /tp/xm1iarc/xm1iarc003/Documents/ARC/lab4/robot.vhd
+=== File: /tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab4/testRobot.vhd
 =================================================================================
     Enabled Coverage            Active      Hits    Misses % Covered
     ----------------            ------      ----    ------ ---------
-    Stmts                           28        22         6      78.5
-    Branches                        55        34        21      61.8
-    FSMs                                                        71.8
-        States                       9         8         1      88.8
-        Transitions                 31        17        14      54.8
-
-=================================================================================
-=== File: /tp/xm1iarc/xm1iarc003/Documents/ARC/lab4/system.vhd
-=================================================================================
-    Enabled Coverage            Active      Hits    Misses % Covered
-    ----------------            ------      ----    ------ ---------
-    Stmts                            1         1         0     100.0
-
-=================================================================================
-=== File: /tp/xm1iarc/xm1iarc003/Documents/ARC/lab4/testSystep.vhd
-=================================================================================
-    Enabled Coverage            Active      Hits    Misses % Covered
-    ----------------            ------      ----    ------ ---------
-    Stmts                           12        12         0     100.0
+    Stmts                           14        14         0     100.0
 
 
-Total Coverage By File (code coverage only, filtered view): 78.5%
+Total Coverage By File (code coverage only, filtered view): 100.0%
 
