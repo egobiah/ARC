@@ -96,7 +96,7 @@ On observera aussi le code coverage analysis :
 \advance\leftskip+3cm
 \includegraphics[scale=0.7]{PremiereAnalyse/codeCov.PNG}
 \caption{Graph de couverture d'état sur le robot}
-\label{graphe-robot}
+
 \end{figure}
 
 
@@ -172,7 +172,7 @@ Total Coverage By File (code coverage only, filtered view): 100.0%
 \advance\leftskip+3cm
 \includegraphics[scale=0.7]{PremiereCorrection/resultats.PNG}
 \caption{Rapport de couverture}
-\label{graphe-robot}
+
 \end{figure}
 
 \paragraph{Conclusion de la correction du robot}
@@ -195,7 +195,72 @@ On sait ici que plusieurs problèmes sont à résoudre pour obtenir un test de c
 \item Utiliser le reset dans pour tout les états
 \end{itemize}
 
-\subsection{Deuxième analyse}
+\paragraph{Résultat après correction}
+Après correction, on obtiens donc les résultats suivants :
+\begin{verbatim}
+Coverage Report Summary Data by file
+
+=================================================================================
+=== File: /tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab4/count.vhd
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           17        17         0     100.0
+    Branches                        20        19         1      95.0
+    FEC Condition Terms             10         6         4      60.0
+    FSMs                                                       100.0
+        States                       2         2         0     100.0
+        Transitions                  4         4         0     100.0
+
+=================================================================================
+=== File: /tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab4/robot.vhd
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           28        28         0     100.0
+    Branches                        43        43         0     100.0
+    FEC Condition Terms             11        11         0     100.0
+    FSMs                                                        87.0
+        States                       9         9         0     100.0
+        Transitions                 31        23         8      74.1
+
+=================================================================================
+=== File: /tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab4/testSystep.vhd
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           12        12         0     100.0
+
+
+Total Coverage By File (code coverage only, filtered view): 91.9%
+
+\end{verbatim}
+
+
+
+\begin{figure}[!h]
+\advance\leftskip+0cm
+\includegraphics[scale=0.7]{PremiereCorrection/ResAfterVHD.PNG}
+\caption{Rapport de couverture}
+
+\end{figure}
+
+\begin{figure}[!h]
+\advance\leftskip+3cm
+\includegraphics[scale=0.7]{PremiereCorrection/GRAPH.PNG}
+\caption{Graph de couverture des états du robot}
+
+\end{figure}
+
+
+\paragraph{Interprétation des résultats}
+
+La couverture n'est pas totales car je n'ai pas testé si le reset marche pour tout les états. De plus, les counters ne rentre pas dans les configurations permettant d'avoir un branching parfait. 
+\sautligne 
+
+Néanmoins, je ne pense pas qu'il est nécessaire d'aller plus loin. Les tests de couvertures sont passé haut la main.
+
+\newpage
 
 
 \section{Vérification d'assertions temporelles}
