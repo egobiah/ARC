@@ -39,12 +39,13 @@ begin
 		if reset = '1' then 
 			state <= IDLE;
 		-- HORLOGE : front montant 
+		elsif ( (start = '1') and (state = IDLE) )then
+				state <= COUNTING;
+				
 		elsif (clk'event and clk = '1') then
 			state <= nextstate;
 		-- Detecter un pic sur start
-		elsif ( (start = '1') and (state = IDLE) )then
-				state <= COUNTING;
-		
+	
 		end if;
 		
 		
