@@ -14,26 +14,26 @@ architecture automate_robot of Robot is
 	type States is (IDLE, RESTING, RANDOMWALK, SCANAREA, HOMING, MOVETOFOOD, MOVETOHOME, DEPOSIT, GRABFOOD) ;
 	Signal state, nextstate : States := IDLE;
 	-- psl default clock is rising_edge(clk);
-	-- psl property p1 is always (search = '1' -> (eventually!(state=GRABFOOD)) and ( not(state = GRABFOOD) until (findfood = '1')));
+	-- psl property p1 is always (search = '1' ->  (findfood = '1') before! (state = GRABFOOD) );
 	-- psl assert p1;
 	
-	-- psl property p2 is always (search = '1' -> (eventually!(state=HOMING)) and ( not(state = HOMING) until (abovesearchth = '1')));
+	-- psl property p2 is always (search = '1' ->  (abovesearchth = '1') before! (state = HOMING) );
 	-- psl assert p2;
 	
 	-- psl property p3 is always (state = MOVETOHOME -> state=DEPOSIT before! rest = '1');
 	-- psl assert p3;
 	
 	-- psl property p4 is  
-	--  always { state = RANDOMWALK;
+	--  always { state = RANDOMWALK and abovesearchth = '0';
 	-- (abovesearchth = '0' and findfood = '0' and not(state = IDLE) )[*]; 
 	-- (abovesearchth ='0' and findfood = '1' and not(state = IDLE)) ; 
-	-- (abovesearchth = '0' and lostfood = '0' and not(state = IDLE))[*];
+	-- (abovesearchth = '0' and lostfood = '0' and closetofood = '0' and not(state = IDLE))[*];
 	-- (abovesearchth = '0' and lostfood = '1' and not(state = IDLE)) ; 
 	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '0' and not(state = IDLE))[*];
 	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state = IDLE)) } |=> {state = RANDOMWALK} ;
 	-- psl assert p4;
 	
-	-- psl property p5 is always (state = RESTING ->  eventually! (state = RANDOMWALK));
+	-- psl property p5 is always ( {state = RESTING } |=> {[*] ; state = RANDOMWALK });
 	-- psl assert p5;
 	
 	
