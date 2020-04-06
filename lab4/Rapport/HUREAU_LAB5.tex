@@ -54,7 +54,7 @@ Les différents types de couverture nous intéréssant sont
 
 \end{itemize}
 
-Les tests "line coverage" et  donne une indication sur la présentation ou l'optimisation du code, ne nous souciants uniquement du bon fonctionnement de notre implémentation, il ne nous sont pas utiles.
+Les tests "line coverage"  donnent une indication sur la présentation ou l'optimisation du code, ne nous souciant uniquement du bon fonctionnement de notre implémentation, il ne nous sont pas utile.
 
 Le test Toggle coverage donnant une indication sur la robustesse du l'implémentation. Il est bien trop compliqué et trop long d'analyser les résultats de ce test dans le cadre de nos labs.
 
@@ -65,7 +65,7 @@ Le test Toggle coverage donnant une indication sur la robustesse du l'implément
 
 \paragraph{Résultats du test de coverage sur le système entier}
 
-Ci dessous : S est l'architecture System, C1 et C2 les compteurs et R le robots dans le testbench System.
+Ci dessous : S est l'architecture System, C1 et C2 les compteurs et R le robot dans le testbench System.
 \begin{figure}[!h]
 \advance\leftskip+3cm
 \includegraphics[scale=0.70]{PremiereAnalyse/Coverage.PNG}
@@ -111,14 +111,14 @@ On observera aussi le code coverage analysis :
 
 
 \paragraph{Interprétation des résultats}
-Les tests de couverture sont très probant (78.5\% pour le système entier). Cependants, on vois que des dans le système entier, l'état SCANAREA n'est jamais atteins bien que les tests de système (se reporter au tableau du précédent lab) avais prévu un chemin pour arriver jusqu'à cet état ainsi que d'utiliser ses transitions. 
+Les tests de couverture sont très probant (78.5\% pour le système entier). Cependant, on vois que des dans le système entier, l'état SCANAREA n'est jamais atteins bien que les tests de système (se reporter au tableau du précédent lab) avaient prévu un chemin pour arriver jusqu'à cet état ainsi que l'utilisation de ses transitions. 
 
 L'analyse du robot avec un testbench différent nous donne alors des indications suivantes : certaines transitions ne sont jamais atteintes, l'état SCANAREA est bien accessible pour l'automate. 
 \sautligne
 
-Deux hyptohèses se posent alors : Soit le système est mal conçus, soit c'est les testbenchs. Avant de se replonger dans le une éventuelle réécriture des architectures et/ou entité (la couverture des branch pourrons nous aider pour cela). Il faut être certains que c'est les testbenchs qui ne sont pas faux.
+Deux hypothèses se posent alors : Soit le système est mal conçus, soit c'est les testbenchs. Avant de se replonger dans une éventuelle réécriture des architectures et/ou entitées (la couverture des branch pourrons nous aider pour cela). Il faut être certains que les testbenchs sont correct.
 
-Après interprétation des résultats, on créer des séquences de signaux qui nous permettrons d'être sur que le testbenchs du robot n'est pas faux.
+Après interprétation des résultats, on créera des séquences de signaux qui nous permettrons d'être sur que le testbenchs du robot n'est pas faux.
 
 
 
@@ -128,14 +128,14 @@ Après interprétation des résultats, on créer des séquences de signaux qui n
 
 \paragraph{Les branchements}
 
-Le code coverage analysis nous indique que certains branchement ne sont pas excuté. En effet, j'avais mis des sécurités sur mes conditions. Prennons l'exemple suivant : .
+Le code coverage analysis nous indique que certains branchements ne sont pas exécuté. En effet, j'avais mis des sécurités sur mes conditions. Prennons l'exemple suivant : .
 
 \begin{verbatim}
 if aboverestth = '1' then nextstate <= RANDOMWALK;
 elsif aboverestth = '0' then nextstate <= RESTING;
 \end{verbatim} 
 
-Je voulais être sur que le deuxième statement ne s'execute uniquement si aboverestth vaut '0' et non pas si aboverestth est différent de '1'.
+Je voulais être sur que le deuxième statement ne s'execute uniquement si aboverestth vaut '0' et non pas si aboverestth est différent de '1', étant donné la structure std_logic
 
 Je ne sais pas si je dois garder cette sécurité.. Pour les tests de couverture, je l'enlève donc.
 
@@ -186,7 +186,7 @@ Total Coverage By File (code coverage only, filtered view): 100.0%
 \end{figure}
 
 \paragraph{Conclusion de la correction du robot}
-Avec ces tests de couvertures qui dont concluant, on peux donc affirmer que le robot se comporte correctement grâce au modifications effectué sur notre code.
+Avec ces tests de couvertures qui sont concluant, on peux donc affirmer que le robot se comporte correctement grâce au modifications effectué sur notre code.
 
 Voir annexes : 
 
@@ -202,7 +202,7 @@ On sait ici que plusieurs problèmes sont à résoudre pour obtenir un test de c
 	\item SCANAREA vers MOVETOFOOD (Contraines : abovesearchth = '0' \& findfood = '1' )
 	\item SCANAREA vers HOMING (Contraines : abovesearchth ='1' )
 	\end{itemize}
-\item Utiliser le reset dans pour tout les états
+\item Utiliser le reset pour tout les états
 \end{itemize}
 
 \paragraph{Résultat après correction}
@@ -265,7 +265,7 @@ Total Coverage By File (code coverage only, filtered view): 91.9%
 
 \paragraph{Interprétation des résultats}
 
-La couverture n'est pas totales car je n'ai pas testé si le reset marche pour tout les états. De plus, les counters ne rentre pas dans les configurations permettant d'avoir un branching parfait. 
+La couverture n'est pas totales car je n'ai pas testé si le reset marche pour tout les états. De plus, les counters ne rentre pas dans les configurations permettant d'avoir un branching parfait sur ces éléments. 
 \sautligne 
 
 Néanmoins, je ne pense pas qu'il est nécessaire d'aller plus loin. Les tests de couvertures sont passé haut la main avec un Total Coverage by file the 91,9\%.
@@ -290,8 +290,8 @@ grabfood tant qu'il n'aura pas trouvé de nourriture (entrée findfood)}
 \end{figure}
 
 \subsubsection{Analyse du chronograme}
-Dans un premier temps, on veux vérifier que l'assertion démare lorsque search vaux 1. (Entouré en bleu ci dessous). 
-En suite, on veux vérifier que l'assertion se finissent avec succès lorsqu'avant de passer dans l'état grabfood on détecte une findfood = '1' (entouré en rouge)
+Dans un premier temps, on veux vérifier que l'assertion démarre lorsque search vaux 1. (Entouré en bleu ci dessous). 
+En suite, on veux vérifier que l'assertion se finisse avec succès lorsqu'avant de passer dans l'état grabfood on détecte une findfood = '1' (entouré en rouge)
 
 \begin{figure}[!h]
 \advance\leftskip+0cm
@@ -344,9 +344,12 @@ avant de positionner la sortie rest à '1'
 \end{figure}
 
 \subsubsection{Analyse du chronograme}
-Ce qui est intéréssant ici est que lorsqu'on fais un reset : lors de la transition de IDLE à RESTING, on met aussi en sortie rest à 1. 
-
 J'interprète ici le fait que le robot ramène de la nouriture lorsque qu'il rentre dans l'état MOVETOHOME.
+\sautligne
+
+Ce qui est intéréssant ici est que lorsqu'on fais un reset lors de la transition de IDLE à RESTING, on met aussi en sortie rest à 1. 
+
+
 
 Il faut donc vérifier que :
 
@@ -380,10 +383,13 @@ il pouvait tenter à nouveau de l'approcher, alors il repasse dans l'état de re
 \end{figure}
 
 Pour cette propriété, j'ai jugé bon de rajouter le not(state = IDLE) car sinon la lecture des assertions n'était pas cohérente. Cela permet alors que l'assertion ne reste pas valide lors d'un reset. 
+
+\alinea 
+
 De plus, j'ai rajouté une contrainte closetofood ='0' par rapport à l'énoncé du tp pour éviter que lorsque le robot prend la transition de MOVETOFOOD vers GRABFOOD, l'assertion reste valide.
 \sautligne
 
-De plus, je me posais la question si ça devais être l'état RANDOMWALK ou le passage de rest à '1' qui déclenche l'assertion. Après quelques tests, si c'est l'état RANDOMWALK, alors plusieurs assetions peuvent se déclencher en même temps. C'est donc rest = '1' qui déclenchera l'assertion.
+De plus, je me posais la question si ça devais être l'état RANDOMWALK ou le passage de rest à '1' qui déclenche l'assertion. Après quelques tests, si c'est l'état RANDOMWALK, alors plusieurs assertions peuvent se déclencher en même temps. C'est donc rest = '1' qui déclenchera l'assertion.
 
 On obtiendras alors le chronograme ci dessous. 
 
@@ -395,7 +401,7 @@ On obtiendras alors le chronograme ci dessous.
 
 Comme on ne s'intéresse pas aux assertions avec reset (rond rouge) et que le rond rose représente le chemin où closetofood = '1', je zoom donc sur la seul partie qui : nous intéresse.
 
-On peux alors apercevoir les diffèrents morceau de la phrase qui fait la description de l'assertion tel que :
+On peux alors apercevoir les différents morceau de la phrase qui fait la description de l'assertion tel que :
 \begin{itemize}
 \item Label A : Chaque fois que le robot commence sa recherche
 \item Label B : Puis abovesearchth n'est pasatteint et la nourriture n'est pas trouvée (pendant un nombre quelconque de cycles)
@@ -419,11 +425,10 @@ et le délai est dépassé
 \caption{Assertion P4 sur le chronograme }
 \end{figure}
 
-Les résultats sont concluants, la PSL property vérifie bien le comportement énoncé une première fois mais une assertion suivante n'est pas levé. J'avais donc tord. Il faut bien que ce soit l'état RANDOMWALK qui déclanche l'assertion. 
+Les résultats sont concluants, la PSL property vérifie bien le comportement énoncé une première fois mais une assertion suivante n'est pas levé. J'avais donc tord. Il faut bien que ce soit l'état RANDOMWALK qui déclenche l'assertion. 
 
 Cependant,toutes les assertions se terminent quand abovesearch vaux '1' mais une assertion se lève aussi pendant le début de ce cycle et ne verras pas le signal d'arrêt :
 
-\end{landscape}
 \newpage
 \begin{figure}[!h]
 \advance\leftskip+0cm
@@ -467,7 +472,7 @@ randomwalk.}
 \newpage
 \subsubsection{Analyse du chronograme}
 
-Comme précédement, on regarde quand est-ce que ca se déclenche et quand est-ce que ça s'arrête en succès.
+Comme précédement, on regarde quand est-ce que ça se déclenche et quand est-ce que ça s'arrête en succès.
 
 \begin{figure}[!h]
 \advance\leftskip+0cm
