@@ -135,7 +135,7 @@ if aboverestth = '1' then nextstate <= RANDOMWALK;
 elsif aboverestth = '0' then nextstate <= RESTING;
 \end{verbatim} 
 
-Je voulais être sur que le deuxième statement ne s'execute uniquement si aboverestth vaut '0' et non pas si aboverestth est différent de '1', étant donné la structure std_logic
+Je voulais être sur que le deuxième statement ne s'execute uniquement si aboverestth vaut '0' et non pas si aboverestth est différent de '1', étant donné la structure std\_logic
 
 Je ne sais pas si je dois garder cette sécurité.. Pour les tests de couverture, je l'enlève donc.
 
@@ -273,7 +273,7 @@ Néanmoins, je ne pense pas qu'il est nécessaire d'aller plus loin. Les tests d
 \newpage
 
 
-
+\begin{landscape}
 \section{Vérification d'assertions temporelles}
 
 Ici, le code de P1 et P2 est faux, il est corrigé en section 4. La démonstration que l'assertion est juste reste néanmoins la même.
@@ -284,8 +284,8 @@ grabfood tant qu'il n'aura pas trouvé de nourriture (entrée findfood)}
 
 \subsubsection{Formule PSL }
 \begin{figure}[!h]
-\advance\leftskip+0cm
-\includegraphics[scale=0.7]{PSL/P1.PNG}
+\centering
+\includegraphics[scale=0.8]{PSL/P1.PNG}
 \caption{PSL property P1}
 \end{figure}
 
@@ -295,7 +295,7 @@ En suite, on veux vérifier que l'assertion se finisse avec succès lorsqu'avant
 
 \begin{figure}[!h]
 \advance\leftskip+0cm
-\includegraphics[scale=0.6]{PSL/P1-1.PNG}
+\includegraphics[scale=0.45]{PSL/P1-1.PNG}
 \caption{Assertion P1 sur le chronograme }
 \end{figure}
 
@@ -319,7 +319,7 @@ Ici on veux vérifier que l'assertion démarre en même temps que la recherche (
 
 \begin{figure}[!h]
 \advance\leftskip+0cm
-\includegraphics[scale=0.6]{PSL/P2-1.PNG}
+\includegraphics[scale=0.5]{PSL/P2-1.PNG}
 \caption{Assertion P2 sur le chronograme }
 \end{figure}
 
@@ -362,7 +362,7 @@ Il faut donc vérifier que :
 
 \begin{figure}[!h]
 \advance\leftskip+0cm
-\includegraphics[scale=0.6]{PSL/P3-1.PNG}
+\includegraphics[scale=0.5]{PSL/P3-1.PNG}
 \caption{Assertion P3 sur le chronograme }
 \end{figure}
 
@@ -378,7 +378,7 @@ il pouvait tenter à nouveau de l'approcher, alors il repasse dans l'état de re
 \subsubsection{Formule PSL }
 \begin{figure}[!h]
 \advance\leftskip+0cm
-\includegraphics[scale=0.7]{PSL/P4.PNG}
+\includegraphics[scale=0.4]{PSL/P4.PNG}
 \caption{PSL property P4}
 \end{figure}
 
@@ -395,9 +395,11 @@ On obtiendras alors le chronograme ci dessous.
 
 \begin{figure}[!h]
 \advance\leftskip+0cm
-\includegraphics[scale=0.6]{PSL/P4-1.PNG}
+\includegraphics[scale=0.45]{PSL/P4-1.PNG}
 \caption{Assertion P4 sur le chronograme }
 \end{figure}
+
+\newpage
 
 Comme on ne s'intéresse pas aux assertions avec reset (rond rouge) et que le rond rose représente le chemin où closetofood = '1', je zoom donc sur la seul partie qui : nous intéresse.
 
@@ -421,18 +423,21 @@ et le délai est dépassé
 
 \begin{figure}[!h]
 \advance\leftskip+0cm
-\includegraphics[scale=0.6]{PSL/P4-2.PNG}
+\includegraphics[scale=0.56]{PSL/P4-2.PNG}
 \caption{Assertion P4 sur le chronograme }
 \end{figure}
 
 Les résultats sont concluants, la PSL property vérifie bien le comportement énoncé une première fois mais une assertion suivante n'est pas levé. J'avais donc tord. Il faut bien que ce soit l'état RANDOMWALK qui déclenche l'assertion. 
 
+\newpage
+\end{landscape}
+
 Cependant,toutes les assertions se terminent quand abovesearch vaux '1' mais une assertion se lève aussi pendant le début de ce cycle et ne verras pas le signal d'arrêt :
 
-\newpage
+
 \begin{figure}[!h]
-\advance\leftskip+0cm
-\includegraphics[scale=0.6]{PSL/P4-3.PNG}
+\centering
+\includegraphics[scale=0.5]{PSL/P4-3.PNG}
 \caption{Assertion P4 sur le chronograme }
 \end{figure}
 
@@ -442,7 +447,7 @@ On obtiens alors le chronograme suivant :
 
 \begin{figure}[!h]
 \advance\leftskip+0cm
-\includegraphics[scale=0.6]{PSL/P4-4.PNG}
+\includegraphics[scale=0.45]{PSL/P4-4.PNG}
 \caption{Assertion P4 sur le chronograme }
 \end{figure}
 
@@ -458,7 +463,7 @@ Le code final de cette assertion est alors :
 \end{figure}
 
 
-
+\newpage
 \subsection{P5}
 \uline{Chaque fois que le robot est en phase de repos, il repassera inévitablement dans l'état
 randomwalk.}
@@ -469,7 +474,6 @@ randomwalk.}
 \caption{PSL property P5}
 \end{figure}
 
-\newpage
 \subsubsection{Analyse du chronograme}
 
 Comme précédement, on regarde quand est-ce que ça se déclenche et quand est-ce que ça s'arrête en succès.
@@ -517,6 +521,9 @@ Tout est cohérent par rapport au design. Les assertions sont alors complémenta
 \sautligne
 
 J'ai effectivement fait des corrections sur le counter (voir annexes). J'ai très peu modifié mes testbenchs.
+\sautligne
+
+J'ai aussi découvert qu'un CTRL+Z sur un dossier sous windows fait disparaitre le dossier en question... 
 
 \section{Réaction après discussion par mail}
 \label{CTFO}
@@ -552,7 +559,7 @@ Alors certes elle ne vérifie pas que ça mais la démonstration sur le chronogr
 On peux néanmoins remplacer le code de P1 par : 
 
 \begin{figure}[!h]
-\advance\leftskip+0cm
+\centering
 \includegraphics[scale=0.6]{PSL/preuveCode.PNG}
 \caption{Assertion P1 révisé }
 \end{figure} 
@@ -560,8 +567,8 @@ On peux néanmoins remplacer le code de P1 par :
 et obtenir le chronograme suivant :
 
 \begin{figure}[!h]
-\advance\leftskip+0cm
-\includegraphics[scale=0.6]{PSL/preuve.PNG}
+\centering
+\includegraphics[scale=0.5]{PSL/preuve.PNG}
 \caption{Assertion  de P1 révisé sur le chronograme }
 \end{figure}
 
