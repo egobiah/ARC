@@ -19,7 +19,8 @@ begin
 	r <= '0', '1' after 44 ns, '0' after 45 ns, '1' after 84 ns, '0' after 85 ns, '1' after  144 ns, '0' after 145  ns,
 	'1' after 224 ns, '0' after  225 ns, '1' after  324 ns, '0' after 325  ns, '1' after  444 ns, '0' after 445  ns, '1' after  584 ns, '0' after  585 ns,
 	'1' after  684 ns, '0' after 685  ns, '1' after  804 ns, '0' after 805  ns, '1' after 904  ns, '0' after 905  ns, '1' after  984 ns, '0' after  985 ns,
-	'1' after 1064  ns, '0' after 1065  ns, '1' after 1204  ns, '0' after 1205  ns, '1' after 1340  ns, '0' after 1341  ns, '1' after 1342 ns, '0' after 1343 ns;
+	'1' after 1064  ns, '0' after 1065  ns, '1' after 1204  ns, '0' after 1205  ns, '1' after 1340  ns, '0' after 1341  ns
+	, '1' after 1342 ns, '0' after 1343 ns;
 	-- manage clock
 	process	
 	begin
@@ -34,9 +35,10 @@ begin
 	f <= '0', '1' after 185 ns, '0' after 195 ns, '1' after 265 ns, '0' after 275 ns, '1' after 365 ns, '0' after 375 ns,
 	'1' after 485 ns, '0' after 495 ns, '1' after 625 ns, '0' after 635 ns, '1' after 725 ns, '0' after 735 ns,
 	'1' after 845 ns, '0' after 855 ns, '1' after 1105 ns, '0' after 1115 ns, '1' after 1245 ns, '0' after 1255 ns,
-	'1' after 1285 ns, '0' after 1295 ns, '1' after 1485 ns, '0' after 1495 ns;
+	'1' after 1285 ns, '0' after 1295 ns, '1' after 1465 ns, '0' after 1475 ns ;
 	-- manage lostfood
-	l <= '0', '1' after 645 ns, '0' after 655 ns, '1' after 745 ns, '0' after 755 ns, '1' after 1265 ns, '0' after 1275 ns, '1' after 1505 ns, '0' after 1515 ns;
+	l <= '0', '1' after 645 ns, '0' after 655 ns, '1' after 745 ns, '0' after 755 ns, '1' after 1265 ns, '0' after 1275 ns,
+	'1' after 1565 ns, '0' after 1575 ns;
 	--manage closetofood
 	c <= '0' , '1' after 285 ns, '0' after 295 ns, '1' after 385 ns, '0' after 395 ns, '1' after 505 ns, '0' after 515 ns,
 	'1' after 1125 ns, '0' after 1135 ns , '1' after 1305 ns, '0' after 1315 ns;
@@ -54,11 +56,11 @@ begin
 	
 	-- manage abovesearchth
 	asearch <= '0', '1' after 765 ns, '0' after 775 ns, '1' after 865 ns, '0' after 875 ns, '1' after 945 ns, '0' after 955 ns,
-	'1' after 1025 ns, '0' after 1035 ns;
+	'1' after 1025 ns, '0' after 1035 ns,'1' after 1805 ns, '0' after 1815 ns ;
 
 	 
 	-- manage scantimeup
-	scan <= '0', '1' after 1525 ns, '0' after 1535 ns;
+	scan <= '0', '1' after 1705 ns, '0' after 1715 ns;
 	
 end test1;
 
