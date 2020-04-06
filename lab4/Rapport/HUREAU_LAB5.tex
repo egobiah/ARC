@@ -588,14 +588,27 @@ On peux faire de même avec P2 tel que :
 \section{Annexes}
 \subsection{Différences de code entre la partie 1 et 2 du projet}
 
+Dans count.vhd, le test pour le branchement avec la détection du start devais ce fait avant celui du front montant 
 \begin{figure}[!h]
 \advance\leftskip+0cm
 \includegraphics[scale=0.6]{modifCount.PNG}
 \caption{Différence avec la première partie du projet de count.vhd}
 \end{figure} 
 
+Très peu de modification du testbench du robot
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.5]{changeR.PNG}
+\caption{Différence avec la première partie du projet de testRobot.vhd }
+\end{figure}
 
+Dans robot.vhd, seul les PSL property ont était ajouté. J'ai aussi modifié le elsif par des else (voir dans les annexes suivantes).
+\sautligne
 
+Le testbench du système n'as pas était touché.
+\sautligne
+
+Le code est disponible sur : \url{https://github.com/egobiah/ARC}
 
 \newgeometry{left=1cm,bottom=+2.5cm}
 \begin{landscape}
