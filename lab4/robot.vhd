@@ -13,8 +13,32 @@ architecture automate_robot of Robot is
 
 	type States is (IDLE, RESTING, RANDOMWALK, SCANAREA, HOMING, MOVETOFOOD, MOVETOHOME, DEPOSIT, GRABFOOD) ;
 	Signal state, nextstate : States := IDLE;
-
+	-- psl default clock is rising_edge(clk);
+	-- psl property p1 is always (search = '1' -> (eventually!(state=GRABFOOD)) and ( not(state = GRABFOOD) until (findfood = '1')));
+	-- psl assert p1;
+	
+	-- psl property p2 is always (search = '1' -> (eventually!(state=HOMING)) and ( not(state = HOMING) until (abovesearchth = '1')));
+	-- psl assert p2;
+	
+	-- psl property p3 is always (state = MOVETOHOME -> state=DEPOSIT before! rest = '1');
+	-- psl assert p3;
+	
+	-- psl property p4 is  
+	--  always { state = RANDOMWALK;
+	-- (abovesearchth = '0' and findfood = '0' and not(state = IDLE) )[*]; 
+	-- (abovesearchth ='0' and findfood = '1' and not(state = IDLE)) ; 
+	-- (abovesearchth = '0' and lostfood = '0' and not(state = IDLE))[*];
+	-- (abovesearchth = '0' and lostfood = '1' and not(state = IDLE)) ; 
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '0' and not(state = IDLE))[*];
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state = IDLE)) } |=> {state = RANDOMWALK} ;
+	-- psl assert p4;
+	
+	-- psl property p5 is always (state = RESTING ->  eventually! (state = RANDOMWALK));
+	-- psl assert p5;
+	
+	
 begin
+
 	-- Calcul de l'état suivant
 	-- Comme on est en std_logic,"elsif ='0'" et non "else", car le signal peux avoir d'autre valeur
 	process (state, athome, findfood, lostfood, closetofood, success, aboverestth, abovesearchth, scantimeup)
