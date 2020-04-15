@@ -12,7 +12,7 @@ end Robot;
 architecture automate_robot of Robot is
 
 	type States is (IDLE, RESTING, RANDOMWALK, SCANAREA, HOMING, MOVETOFOOD, MOVETOHOME, DEPOSIT, GRABFOOD) ;
-	Signal state, nextstate : States := IDLE;
+	Signal state, nextstate : States;
 	-- psl default clock is rising_edge(clk);
 
 	-- psl property p1 is always (search = '1' ->  (findfood = '1') before! (state = GRABFOOD) );

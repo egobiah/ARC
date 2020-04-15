@@ -1,0 +1,15 @@
+
+*******************************************************
+
+Cell: Robot    View: automate_robot    Library: work
+
+*******************************************************
+
+ Number of ports :                      13
+ Number of nets :                       55
+ Number of instances :                  39
+ Number of references to this view :     0
+
+Total accumulated area : 
+ Number of um2 :                      4696
+ Number of accumulated instances :      39
