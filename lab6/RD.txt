@@ -1,3 +1,4 @@
+NO wire table is found
 
 
 
@@ -6,188 +7,251 @@
 	Clock                : Frequency
       ------------------------------------
 
-	clk                  : N/A
+	clk                  : 851.9 MHz
+NO wire table is found
 
 
 
                         Critical Path Report
 
 Critical path #1, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix26/out                             INV         0.00  0.00 up             0.00
-ix28/in[1]                           AND2        0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(3)/QN                    DFC1        0.00  0.75 up             0.01
+ix17/Q                             NOR40       0.17  0.92 dn             0.01
+ix795/Q                            AOI211      0.18  1.09 up             0.01
+ix47/Q                             CLKIN1      0.08  1.17 dn             0.01
+reg_state(3)/D                     DFC1        0.00  1.17 dn             0.00
+data arrival time                                    1.17
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.17
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #2, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix392/out                            OR2         0.00  0.00 up             0.00
-ix26/in                              INV         0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(5)/QN                    DFC1        0.00  0.78 up             0.01
+ix43/Q                             NOR21       0.12  0.90 dn             0.01
+ix795/Q                            AOI211      0.16  1.06 up             0.01
+ix47/Q                             CLKIN1      0.08  1.14 dn             0.01
+reg_state(3)/D                     DFC1        0.00  1.14 dn             0.00
+data arrival time                                    1.14
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.14
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #3, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix20/out                             INV         0.00  0.00 up             0.00
-ix22/in[1]                           AND2        0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(4)/QN                    DFC1        0.00  0.79 up             0.02
+ix87/Q                             NOR21       0.10  0.89 dn             0.01
+ix762/Q                            AOI2111     0.17  1.06 up             0.01
+ix139/Q                            OAI211      0.08  1.14 dn             0.01
+reg_state(1)/D                     DFC1        0.00  1.14 dn             0.00
+data arrival time                                    1.14
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.14
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #4, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix378/out                            OR2         0.00  0.00 up             0.00
-ix20/in                              INV         0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(5)/QN                    DFC1        0.00  0.78 up             0.01
+ix43/Q                             NOR21       0.12  0.90 dn             0.01
+ix776/Q                            NAND31      0.14  1.04 up             0.01
+ix103/Q                            OAI211      0.08  1.12 dn             0.01
+reg_state(8)/D                     DFC1        0.00  1.12 dn             0.00
+data arrival time                                    1.12
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.12
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #5, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix408/out                            OR2         0.00  0.00 up             0.00
-ix533/in                             INV         0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(3)/Q                     DFC1        0.00  0.73 dn             0.03
+ix791/Q                            AOI211      0.21  0.94 up             0.01
+ix65/Q                             OAI311      0.12  1.06 dn             0.01
+reg_state(2)/D                     DFC1        0.00  1.06 dn             0.00
+data arrival time                                    1.06
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.06
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #6, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix376/out                            OR2         0.00  0.00 up             0.00
-ix493/in                             INV         0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(3)/Q                     DFC1        0.00  0.73 dn             0.03
+ix787/Q                            OAI2111     0.16  0.89 up             0.01
+ix35/Q                             OAI311      0.14  1.03 dn             0.01
+reg_state(5)/D                     DFC1        0.00  1.03 dn             0.00
+data arrival time                                    1.03
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.03
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #7, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix345/out                            OR2         0.00  0.00 up             0.00
-ix469/in                             INV         0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(3)/Q                     DFC1        0.00  0.73 dn             0.03
+ix809/Q                            OAI311      0.20  0.94 up             0.01
+ix81/Q                             OAI211      0.09  1.02 dn             0.01
+reg_state(4)/D                     DFC1        0.00  1.02 dn             0.00
+data arrival time                                    1.02
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.02
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #8, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix406/out                            OR2         0.00  0.00 up             0.00
-ix408/in[0]                          OR2         0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(2)/Q                     DFC1        0.00  0.72 dn             0.03
+ix791/Q                            AOI211      0.17  0.89 up             0.01
+ix65/Q                             OAI311      0.12  1.01 dn             0.01
+reg_state(2)/D                     DFC1        0.00  1.01 dn             0.00
+data arrival time                                    1.01
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.01
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #9, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-scantimeup/                                      0.00  0.00 up             0.00
-ix376/in[1]                          OR2         0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(2)/Q                     DFC1        0.00  0.72 dn             0.03
+ix787/Q                            OAI2111     0.15  0.87 up             0.01
+ix35/Q                             OAI311      0.14  1.01 dn             0.01
+reg_state(5)/D                     DFC1        0.00  1.01 dn             0.00
+data arrival time                                    1.01
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.01
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
 
 Critical path #10, (unconstrained path)
-NAME                                 GATE              ARRIVAL              LOAD
---------------------------------------------------------------------------------
-ix374/out                            OR2         0.00  0.00 up             0.00
-ix376/in[0]                          OR2         0.00  0.00 up             0.00
-data arrival time                                      0.00
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
 
 
-data required time                                  not specified
---------------------------------------------------------------------------------
-data required time                                  not specified
-data arrival time                                      0.00
-                                                    ----------
-                                                 unconstrained path
---------------------------------------------------------------------------------
+reg_state(5)/QN                    DFC1        0.00  0.78 up             0.01
+ix97/Q                             NOR40       0.22  1.01 dn             0.00
+food/                                          0.00  1.01 dn             0.00
+data arrival time                                    1.01
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.01
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
 
 
