@@ -5,11 +5,30 @@ Cell: Robot    View: automate_robot    Library: work
 
 *******************************************************
 
+
+ Cell         Library  References     Total Area
+
+AND2          PRIMITIVES     6 x      1      6 AND2
+DFFRS         PRIMITIVES     9 x      1      9 DFFRS
+FALSE         PRIMITIVES     1 x      1      1 FALSE
+INV           PRIMITIVES     8 x      1      8 INV
+MUX           PRIMITIVES    18 x      1     18 MUX
+OR2           PRIMITIVES    11 x      1     11 OR2
+TRUE          PRIMITIVES     1 x      1      1 TRUE
+select_9_9    OPERATORS      9 x      1      9 select_9_9
+
  Number of ports :                      13
- Number of nets :                       55
- Number of instances :                  39
+ Number of nets :                       73
+ Number of instances :                  63
  Number of references to this view :     0
 
 Total accumulated area : 
- Number of um2 :                      4696
- Number of accumulated instances :      39
+ Black Box AND2 :                        6
+ Black Box DFFRS :                       9
+ Black Box FALSE :                       1
+ Black Box INV :                         8
+ Black Box MUX :                        18
+ Black Box OR2 :                        11
+ Black Box TRUE :                        1
+ Black Box select_9_9 :                  9
+ Number of accumulated instances :      63
