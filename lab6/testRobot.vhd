@@ -12,11 +12,33 @@ architecture test1 of testRobot is
 	success, aboverestth, abovesearchth, scantimeup: in std_logic;
 	rest, search, food: out std_logic);
   end component;
+  
+  component RobotBin is
+	 port(reset, clk, athome, findfood, lostfood, closetofood,
+	success, aboverestth, abovesearchth, scantimeup: in std_logic;
+	rest, search, food: out std_logic);
+  end component;
+  
+  component RobotGray is
+	 port(reset, clk, athome, findfood, lostfood, closetofood,
+	success, aboverestth, abovesearchth, scantimeup: in std_logic;
+	rest, search, food: out std_logic);
+  end component;
+  
+  component RobotHot is
+	 port(reset, clk, athome, findfood, lostfood, closetofood,
+	success, aboverestth, abovesearchth, scantimeup: in std_logic;
+	rest, search, food: out std_logic);
+  end component;
   signal r, clk, ah, f, l, c, s, arest, asearch,scan, re, se, fo : std_logic := '0';
+
 begin
-     A: Robot port map(r, clk, ah, f, l, c, s, arest, asearch,scan, re, se, fo);
+     Rclassic:Robot port map(r, clk, ah, f, l, c, s, arest, asearch,scan, re, se, fo);
+    Rbin:RobotBin port map(r, clk, ah, f, l, c, s, arest, asearch,scan, re, se, fo);
+     RHot: RobotHOT port map(r, clk, ah, f, l, c, s, arest, asearch,scan, re, se, fo);
+     RGray: RobotGray port map(r, clk, ah, f, l, c, s, arest, asearch,scan, re, se, fo);
 	-- manage reset
-	r <= '0', '1' after 44 ns, '0' after 45 ns, '1' after 84 ns, '0' after 85 ns, '1' after  144 ns, '0' after 145  ns,
+	r <= '1', '0' after 1 ns, '1' after 44 ns, '0' after 45 ns, '1' after 84 ns, '0' after 85 ns, '1' after  144 ns, '0' after 145  ns,
 	'1' after 224 ns, '0' after  225 ns, '1' after  324 ns, '0' after 325  ns, '1' after  444 ns, '0' after 445  ns, '1' after  584 ns, '0' after  585 ns,
 	'1' after  684 ns, '0' after 685  ns, '1' after  804 ns, '0' after 805  ns, '1' after 904  ns, '0' after 905  ns, '1' after  984 ns, '0' after  985 ns,
 	'1' after 1064  ns, '0' after 1065  ns, '1' after 1204  ns, '0' after 1205  ns, '1' after 1340  ns, '0' after 1341  ns
@@ -67,8 +89,14 @@ end test1;
 library work;
 configuration config1 of work.testRobot is 
     for test1 
-       for A:Robot use entity work.Robot(automate_robot);
-       end for;
+		for Rclassic:Robot use entity work.Robot(automate_robot);
+		end for;
+		for Rbin:RobotBin use entity work.RobotBin(automate_robotBin);
+		end for;
+		for RHot:RobotHOT use entity work.RobotHOT(automate_robotHOT);
+		end for;
+		for RGray:RobotGray use entity work.RobotGray(automate_robotGray);
+		end for;
     end for; 
 end config1; 
 

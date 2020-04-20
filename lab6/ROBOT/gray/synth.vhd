@@ -6,11 +6,13 @@
 --      
 --      LeonardoSpectrum Level 3, 2015a.6
 -- 
+library c35_CORELIB;
+use c35_CORELIB.vcomponents.all;
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
-entity Robot is
+entity RobotGray is
    port (
       reset : IN std_logic ;
       clk : IN std_logic ;
@@ -25,9 +27,9 @@ entity Robot is
       rest : OUT std_logic ;
       search : OUT std_logic ;
       food : OUT std_logic) ;
-end Robot ;
+end RobotGray ;
 
-architecture automate_robot of Robot is
+architecture automate_robotGray of RobotGray is
    signal rest_EXMPLR, food_EXMPLR, state_3, state_2, nx486, state_0, 
       state_1, nx22, nx34, nx42, nx54, nx70, nx76, nx90, nx126, nx138, nx150, 
       nx162, nx494, nx496, nx498, nx500, nx502, nx505, nx508, nx513, nx515, 
@@ -92,5 +94,5 @@ begin
    ix27 : NOR40 port map ( Q=>search, A=>nx553, B=>nx523, C=>state_3, D=>
       state_2);
    ix554 : NAND21 port map ( Q=>nx553, A=>aboverestth, B=>nx517);
-end automate_robot ;
+end automate_robotGray ;
 

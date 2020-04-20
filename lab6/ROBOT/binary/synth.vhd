@@ -6,11 +6,13 @@
 --      
 --      LeonardoSpectrum Level 3, 2015a.6
 -- 
+library c35_CORELIB;
+use c35_CORELIB.vcomponents.all;
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
-entity Robot is
+entity RobotBin is
    port (
       reset : IN std_logic ;
       clk : IN std_logic ;
@@ -25,9 +27,9 @@ entity Robot is
       rest : OUT std_logic ;
       search : OUT std_logic ;
       food : OUT std_logic) ;
-end Robot ;
+end RobotBin ;
 
-architecture automate_robot of Robot is
+architecture automate_robotBin of RobotBin is
    signal rest_EXMPLR, food_EXMPLR, state_1, state_2, nx477, nx4, state_3, 
       nx478, nx16, state_0, nx30, nx479, nx42, nx72, nx116, nx132, nx154, 
       nx174, nx182, nx487, nx492, nx495, nx499, nx501, nx503, nx505, nx507, 
@@ -103,5 +105,5 @@ begin
    ix559 : CLKIN1 port map ( Q=>nx558, A=>aboverestth);
    ix548 : IMUX21 port map ( Q=>nx547, A=>state_1, B=>athome, S=>nx520);
 
-end automate_robot ;
+end automate_robotBin ;
 
