@@ -1,0 +1,21 @@
+-- Reading vhdl file /tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab6/robot.vhd into library work
+-- Loading entity Robot into library work
+"/tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab6/robot.vhd",line 6: Warning, replacing Robot in HDL library work.
+"/tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab6/robot.vhd",line 14: Info, Enumerated type States with 9 elements encoded as onehot.
+Encodings for States values
+        value    States[8-0]
+============================
+           IDLE  --------1
+        RESTING  -------1-
+     RANDOMWALK  ------1--
+       SCANAREA  -----1---
+         HOMING  ----1----
+     MOVETOFOOD  ---1-----
+     MOVETOHOME  --1------
+        DEPOSIT  -1-------
+       GRABFOOD  1--------
+
+-- Loading architecture automate_robot of Robot into library work
+"/tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab6/robot.vhd",line 12: Warning, replacing automate_robot of entity Robot.
+-- Compiling root entity Robot(automate_robot)
+-- Info, replacing Robot(automate_robot)

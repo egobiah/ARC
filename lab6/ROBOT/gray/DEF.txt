@@ -1,0 +1,22 @@
+-- Reading file /softslin/leonardo2015a/data/standard.vhd for unit standard
+-- Loading package standard into library std
+-- Reading vhdl file /tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab6/robot.vhd into library work
+-- Reading file /softslin/leonardo2015a/data/std_1164.vhd for unit std_logic_1164
+-- Loading package std_logic_1164 into library ieee
+-- Loading entity Robot into library work
+"/tp/xm1iarc/xm1iarc003/projet_asic/ARC/lab6/robot.vhd",line 14: Info, Enumerated type States with 9 elements encoded as gray.
+Encodings for States values
+        value    States[3-0]
+============================
+           IDLE  0000
+        RESTING  0001
+     RANDOMWALK  0011
+       SCANAREA  0010
+         HOMING  0110
+     MOVETOFOOD  0111
+     MOVETOHOME  0101
+        DEPOSIT  0100
+       GRABFOOD  1100
+
+-- Loading architecture automate_robot of Robot into library work
+-- Compiling root entity Robot(automate_robot)

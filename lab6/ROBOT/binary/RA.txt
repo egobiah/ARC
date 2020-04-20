@@ -1,0 +1,34 @@
+
+*******************************************************
+
+Cell: Robot    View: automate_robot    Library: work
+
+*******************************************************
+
+
+ Cell      Library  References     Total Area
+
+AOI211     c35_corelib     1 x     73     73 um2
+AOI221     c35_corelib     1 x     91     91 um2
+AOI311     c35_corelib     5 x     91    455 um2
+CLKIN1     c35_corelib     7 x     36    255 um2
+DFC1       c35_corelib     4 x    309   1238 um2
+IMUX21     c35_corelib     1 x     91     91 um2
+NAND21     c35_corelib     6 x     55    328 um2
+NAND31     c35_corelib     5 x     73    364 um2
+NAND41     c35_corelib     1 x     91     91 um2
+NOR21      c35_corelib     3 x     55    164 um2
+NOR40      c35_corelib     4 x     73    291 um2
+OAI211     c35_corelib     1 x     73     73 um2
+OAI2111    c35_corelib     2 x     91    182 um2
+OAI221     c35_corelib     1 x     91     91 um2
+OAI311     c35_corelib     1 x     91     91 um2
+
+ Number of ports :                      13
+ Number of nets :                       57
+ Number of instances :                  43
+ Number of references to this view :     0
+
+Total accumulated area : 
+ Number of um2 :                      3877
+ Number of accumulated instances :      43

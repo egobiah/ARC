@@ -1,0 +1,280 @@
+NO wire table is found
+
+
+
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 519.8 MHz
+NO wire table is found
+
+
+
+                        Critical Path Report
+
+Critical path #1, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(2)/Q                     DFC1        0.00  0.79 dn             0.05
+ix556/Q                            NAND21      0.20  0.99 up             0.01
+ix197/Q                            NOR40       0.25  1.24 dn             0.02
+ix43/Q                             NOR40       0.24  1.47 up             0.01
+ix552/Q                            AOI311      0.15  1.63 dn             0.01
+ix73/Q                             OAI2111     0.29  1.92 up             0.01
+reg_state(0)/D                     DFC1        0.00  1.92 up             0.00
+data arrival time                                    1.92
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.92
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #2, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(0)/Q                     DFC1        0.00  0.74 dn             0.03
+ix191/Q                            NAND21      0.14  0.89 up             0.01
+ix197/Q                            NOR40       0.31  1.19 dn             0.02
+ix43/Q                             NOR40       0.24  1.43 up             0.01
+ix552/Q                            AOI311      0.15  1.59 dn             0.01
+ix73/Q                             OAI2111     0.29  1.88 up             0.01
+reg_state(0)/D                     DFC1        0.00  1.88 up             0.00
+data arrival time                                    1.88
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.88
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #3, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(1)/QN                    DFC1        0.00  0.68 dn             0.03
+ix191/Q                            NAND21      0.17  0.85 up             0.01
+ix197/Q                            NOR40       0.31  1.16 dn             0.02
+ix43/Q                             NOR40       0.24  1.39 up             0.01
+ix552/Q                            AOI311      0.15  1.55 dn             0.01
+ix73/Q                             OAI2111     0.29  1.84 up             0.01
+reg_state(0)/D                     DFC1        0.00  1.84 up             0.00
+data arrival time                                    1.84
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.84
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #4, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(2)/Q                     DFC1        0.00  0.79 dn             0.05
+ix556/Q                            NAND21      0.20  0.99 up             0.01
+ix197/Q                            NOR40       0.25  1.24 dn             0.02
+ix117/Q                            OAI211      0.25  1.49 up             0.01
+ix536/Q                            NAND21      0.05  1.54 dn             0.01
+ix133/Q                            AOI311      0.19  1.73 up             0.01
+reg_state(2)/D                     DFC1        0.00  1.73 up             0.00
+data arrival time                                    1.73
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.73
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #5, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(0)/Q                     DFC1        0.00  0.74 dn             0.03
+ix191/Q                            NAND21      0.14  0.89 up             0.01
+ix197/Q                            NOR40       0.31  1.19 dn             0.02
+ix117/Q                            OAI211      0.25  1.45 up             0.01
+ix536/Q                            NAND21      0.05  1.50 dn             0.01
+ix133/Q                            AOI311      0.19  1.69 up             0.01
+reg_state(2)/D                     DFC1        0.00  1.69 up             0.00
+data arrival time                                    1.69
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.69
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #6, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(2)/QN                    DFC1        0.00  0.95 up             0.05
+ix5/Q                              NAND21      0.10  1.05 dn             0.03
+ix155/Q                            NOR40       0.19  1.24 up             0.01
+ix516/Q                            AOI311      0.15  1.39 dn             0.01
+ix183/Q                            OAI2111     0.29  1.69 up             0.01
+reg_state(1)/D                     DFC1        0.00  1.69 up             0.00
+data arrival time                                    1.69
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.69
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #7, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(0)/QN                    DFC1        0.00  0.97 up             0.05
+ix519/Q                            NOR21       0.24  1.21 dn             0.03
+ix530/Q                            NAND41      0.31  1.52 up             0.01
+ix17/Q                             OAI311      0.14  1.65 dn             0.01
+reg_state(3)/D                     DFC1        0.00  1.65 dn             0.00
+data arrival time                                    1.65
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.65
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #8, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(1)/QN                    DFC1        0.00  0.68 dn             0.03
+ix191/Q                            NAND21      0.17  0.85 up             0.01
+ix197/Q                            NOR40       0.31  1.16 dn             0.02
+ix117/Q                            OAI211      0.25  1.41 up             0.01
+ix536/Q                            NAND21      0.05  1.46 dn             0.01
+ix133/Q                            AOI311      0.19  1.65 up             0.01
+reg_state(2)/D                     DFC1        0.00  1.65 up             0.00
+data arrival time                                    1.65
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.65
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #9, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(1)/QN                    DFC1        0.00  0.68 dn             0.03
+ix5/Q                              NAND21      0.13  1.02 dn             0.03
+ix155/Q                            NOR40       0.19  1.20 up             0.01
+ix516/Q                            AOI311      0.15  1.36 dn             0.01
+ix183/Q                            OAI2111     0.29  1.65 up             0.01
+reg_state(1)/D                     DFC1        0.00  1.65 up             0.00
+data arrival time                                    1.65
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.65
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+Critical path #10, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+clock information not specified
+delay thru clock network                             0.00 (ideal)
+
+
+reg_state(0)/QN                    DFC1        0.00  0.97 up             0.05
+ix519/Q                            NOR21       0.24  1.21 dn             0.03
+ix117/Q                            OAI211      0.18  1.39 up             0.01
+ix536/Q                            NAND21      0.05  1.45 dn             0.01
+ix133/Q                            AOI311      0.19  1.64 up             0.01
+reg_state(2)/D                     DFC1        0.00  1.64 up             0.00
+data arrival time                                    1.64
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    1.64
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+

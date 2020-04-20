@@ -1,0 +1,28 @@
+#
+#
+# /softslin/leonardo2015a/bin/Linux/spectrum 
+# Mon Apr 20 18:10:05 2020
+load_library /softslin/leonardo2015a/lib/c35_CORELIB
+
+set encoding onehot 
+
+read ../../Robot.vhd
+
+### Previous Command Failed
+
+optimize -delay
+
+### Previous Command Failed
+
+report_area -cell_usage > RA.txt
+
+### Previous Command Failed
+
+read ../../Robot.vhd
+
+### Previous Command Failed
+
+read ../../Robot.vhd
+
+### Previous Command Failed
+
