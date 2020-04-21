@@ -1,5 +1,3 @@
-
--- 
 -- Definition of  Robot
 -- 
 --      Mon Apr 20 18:13:01 2020
@@ -9,6 +7,8 @@
 library c35_CORELIB;
 use c35_CORELIB.vcomponents.all;
 
+
+	
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
@@ -35,6 +35,44 @@ architecture automate_robotHot of RobotHot is
       nx138, nx753, nx757, nx759, nx761, nx765, nx767, nx770, nx772, nx775, 
       nx778, nx781, nx783, nx786, nx790, nx794, nx797, nx800, nx802, nx805, 
       nx808, nx811, nx813, nx816: std_logic ;
+	  
+	  -- psl default clock is rising_edge(clk);
+
+	-- psl property p1 is always (search = '1' ->  (findfood = '1') before! 
+	-- (state_0 = '0' and state_1 = '0' and state_2 = '0' and state_3 = '0' and state_4 = '0' 
+	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '0'	) );
+	-- psl assert p1;
+	
+	-- psl property p2 is always (search = '1' ->  (abovesearchth = '1') before! 
+	-- (state_0 = '0' and state_1 = '0' and state_2 = '0' and state_3 = '0' and state_4 = '1' 
+	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	) );
+	-- psl assert p2;
+	
+	-- psl property p3 is always (-- (state_0 = '0' and state_1 = '0' and state_2 = '0' and state_3 = '0' and state_4 = '0' 
+	--and state_5 = '0' and nx767 = '0'  and state_7 = '0' and nx772 = '1'	) -> 
+	-- (state_0 = '0' and state_1 = '0' and state_2 = '0' and state_3 = '0' and state_4 = '0' 
+	--and state_5 = '0' and nx767 = '1'  and state_7 = '1' and nx772 = '1'	) before! rest = '1');
+	-- psl assert p3;
+	
+	-- psl property p4 is  
+
+	--  always { state = (state_0 = '0' and state_1 = '0' and state_2 = '1' and state_3 = '0' and state_4 = '0' 
+	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	) and abovesearchth = '0';
+	-- (abovesearchth = '0' and findfood = '0' and not(state_0 = '1') )[*]; 
+	-- (abovesearchth ='0' and findfood = '1' and not(state_0 = '1') ; 
+	-- (abovesearchth = '0' and lostfood = '0' and closetofood = '0' and not(state_0 = '1')[*];
+	-- (abovesearchth = '0' and lostfood = '1' and not(state_0 = '1') ; 
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '0' and not(state_0 = '1')[*];
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state_0 = '1') } |=> {(state_0 = '0' and state_1 = '0' and state_2 = '1' and state_3 = '0' and state_4 = '0' 
+	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	)} ;
+	-- psl assert p4;
+	
+
+	-- psl property p5 is always ( {(state_0 = '0' and state_1 = '1' and state_2 = '0' and state_3 = '0' and state_4 = '0' 
+	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	) } |=> {[*] ; (state_0 = '0' and state_1 = '0' and state_2 = '1' and state_3 = '0' and state_4 = '0' 
+	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	) });
+	-- psl assert p5;
+	
 
 begin
    ix734 : TIE0 port map ( Q=>nx733);

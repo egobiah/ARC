@@ -35,6 +35,32 @@ architecture automate_robotGray of RobotGray is
       nx162, nx494, nx496, nx498, nx500, nx502, nx505, nx508, nx513, nx515, 
       nx517, nx520, nx523, nx526, nx529, nx534, nx536, nx539, nx541, nx544, 
       nx547, nx549, nx553: std_logic ;
+	-- psl default clock is rising_edge(clk);
+
+	-- psl property p1 is always (search = '1' ->  (findfood = '1') before! (state_3 = '1' and state_2 = '1' and state_1 = '0' and state_0 = '0') );
+	-- psl assert p1;
+	
+	-- psl property p2 is always (search = '1' ->  (abovesearchth = '1') before! (state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0') );
+	-- psl assert p2;
+	
+	-- psl property p3 is always ((state_3 = '0' and state_2 = '1' and state_1 = '0' and state_0 = '') -> 
+	-- (state_3 = '0' and state_2 = '1' and state_1 = '0' and state_0 = '0') before! rest = '1');
+	-- psl assert p3;
+	
+	-- psl property p4 is  
+
+	--  always { (state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '1') and abovesearchth = '0';
+	-- (abovesearchth = '0' and findfood = '0' and not((state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0')) )[*]; 
+	-- (abovesearchth ='0' and findfood = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0')) ; 
+	-- (abovesearchth = '0' and lostfood = '0' and closetofood = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0'))[*];
+	-- (abovesearchth = '0' and lostfood = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0')) ; 
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0'))[*];
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0')) } |=> {(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '1')} ;
+	-- psl assert p4;
+	
+
+	-- psl property p5 is always ( {(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '1') } |=> {[*] ; (state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '1') });
+	-- psl assert p5;
 
 begin
    rest <= rest_EXMPLR ;
