@@ -52,12 +52,12 @@ architecture automate_robotBin of RobotBin is
 	
 	-- psl property p4 is  
 	--  always { (state_2 = '0' and state_1 = '1' and state_0 = '0') and abovesearchth = '0';
-	-- (abovesearchth = '0' and findfood = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0') )[*]; 
-	-- (abovesearchth ='0' and findfood = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0')) ; 
-	-- (abovesearchth = '0' and lostfood = '0' and closetofood = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0'))[*];
-	-- (abovesearchth = '0' and lostfood = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0')) ; 
-	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0'))[*];
-	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0')) } |=> {(state_2 = '0' and state_1 = '1' and state_0 = '0')} ;
+	-- (abovesearchth = '0' and findfood = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0') )[*]; 
+	-- (abovesearchth ='0' and findfood = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0')) ; 
+	-- (abovesearchth = '0' and lostfood = '0' and closetofood = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0'))[*];
+	-- (abovesearchth = '0' and lostfood = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0')) ; 
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0'))[*];
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '0' and state_0 = '0')) } |=> {(state_2 = '0' and state_1 = '1' and state_0 = '0')} ;
 	-- psl assert p4;
 	
 	

@@ -3,14 +3,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
-entity Count is generic(threshold: natural := 10);
+entity Count is
  port(reset, clk, start: in std_logic; aboveth: out std_logic);
 end Count;
 
 architecture Behav of Count is
 	type States is (IDLE, COUNTING);
 	Signal state, nextstate : States := IDLE;
-	Signal c : natural := 0;
+	Signal c : integer range 0 to 10 := 0;
 begin
 	-- Calcul de l'état suivant
 	-- Comme on est en std_logic,"elsif ='0'" et non "else", car le signal peux avoir d'autre valeur
@@ -24,7 +24,7 @@ begin
 				nextstate <= IDLE;
 			end if;
 		when COUNTING =>
-			if c < threshold then	
+			if c < 10 then	
 				nextstate <= COUNTING;
 			else 
 				nextstate <= IDLE;
@@ -40,8 +40,7 @@ begin
 			state <= IDLE;
 		-- HORLOGE : front montant 
 		elsif ( (start = '1') and (state = IDLE) )then
-				state <= COUNTING;
-				
+				state <= COUNTING;		
 		elsif (clk'event and clk = '1') then
 			state <= nextstate;
 		-- Detecter un pic sur start
@@ -63,9 +62,9 @@ begin
 					C <= 0;
 				elsif ( state = IDLE and start = '1') then
 					c <= c + 1;
-				elsif (state = COUNTING and c < threshold) then
+				elsif (state = COUNTING and c < 10) then
 					c <= c + 1;
-				elsif(state = COUNTING and c >= threshold) then
+				elsif(state = COUNTING and c >= 10) then
 					c <= 0;
 				end if;
 			end if;
@@ -76,7 +75,7 @@ begin
 
 	process(c)
 	begin
-		if  (c >= threshold) then
+		if  (c >= 10) then
 			aboveth <= '1';
 		else aboveth <= '0';
 		end if;

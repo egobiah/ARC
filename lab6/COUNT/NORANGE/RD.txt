@@ -1,0 +1,20 @@
+NO wire table is found
+
+
+
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 155.2 MHz
+NO wire table is found
+
+
+
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 155.2 MHz
