@@ -1,0 +1,65 @@
+\contentsline {subsection}{\numberline {0.1}Conclusion}{3}{subsection.0.1}%
+\contentsline {section}{\numberline {1}Simulation}{4}{section.1}%
+\contentsline {section}{\numberline {2}Assertion}{6}{section.2}%
+\contentsline {section}{\numberline {3}Synthèse du compteur}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Compteur non borné}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Compteur avec valeur borné}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Conclusion}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Annexes}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Descprition comportementale du système de contrôle}{8}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Premier process}{8}{subsubsection.4.1.1}%
+\contentsline {paragraph}{\numberline {4.1.1.1}Code VHDL}{8}{paragraph.4.1.1.1}%
+\contentsline {paragraph}{\numberline {4.1.1.2}Bloc combinatoire ou mémorisant}{9}{paragraph.4.1.1.2}%
+\contentsline {paragraph}{\numberline {4.1.1.3}Liste de sensibilité}{9}{paragraph.4.1.1.3}%
+\contentsline {paragraph}{\numberline {4.1.1.4}Composants utilisé}{9}{paragraph.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.2}Second process}{10}{subsubsection.4.1.2}%
+\contentsline {paragraph}{\numberline {4.1.2.1}Code VHDL}{10}{paragraph.4.1.2.1}%
+\contentsline {paragraph}{\numberline {4.1.2.2}Bloc combinatoire ou mémorisant}{10}{paragraph.4.1.2.2}%
+\contentsline {paragraph}{\numberline {4.1.2.3}Liste de sensibilité}{10}{paragraph.4.1.2.3}%
+\contentsline {paragraph}{\numberline {4.1.2.4}Composants utilisé}{10}{paragraph.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.3}Output process}{11}{subsubsection.4.1.3}%
+\contentsline {paragraph}{\numberline {4.1.3.1}Code VHDL}{11}{paragraph.4.1.3.1}%
+\contentsline {paragraph}{\numberline {4.1.3.2}Bloc combinatoire ou mémorisant}{11}{paragraph.4.1.3.2}%
+\contentsline {paragraph}{\numberline {4.1.3.3}Liste de sensibilité}{11}{paragraph.4.1.3.3}%
+\contentsline {paragraph}{\numberline {4.1.3.4}Composants utilisé}{11}{paragraph.4.1.3.4}%
+\contentsline {subsection}{\numberline {4.2}Descprition comportementale du compteur}{12}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Premier process}{12}{subsubsection.4.2.1}%
+\contentsline {paragraph}{\numberline {4.2.1.1}Code VHDL}{12}{paragraph.4.2.1.1}%
+\contentsline {paragraph}{\numberline {4.2.1.2}Bloc combinatoire ou mémorisant}{12}{paragraph.4.2.1.2}%
+\contentsline {paragraph}{\numberline {4.2.1.3}Liste de senssibilité}{12}{paragraph.4.2.1.3}%
+\contentsline {paragraph}{\numberline {4.2.1.4}Composants utilisé}{12}{paragraph.4.2.1.4}%
+\contentsline {subsubsection}{\numberline {4.2.2}Deuxième process}{13}{subsubsection.4.2.2}%
+\contentsline {paragraph}{\numberline {4.2.2.1}Code VHDL}{13}{paragraph.4.2.2.1}%
+\contentsline {paragraph}{\numberline {4.2.2.2}Bloc combinatoire ou mémorisant}{13}{paragraph.4.2.2.2}%
+\contentsline {paragraph}{\numberline {4.2.2.3}Liste de senssibilité}{13}{paragraph.4.2.2.3}%
+\contentsline {paragraph}{\numberline {4.2.2.4}Composants utilisé}{13}{paragraph.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.3}Troisième process}{14}{subsubsection.4.2.3}%
+\contentsline {paragraph}{\numberline {4.2.3.1}Code VHDL}{14}{paragraph.4.2.3.1}%
+\contentsline {paragraph}{\numberline {4.2.3.2}Bloc combinatoire ou mémorisant}{14}{paragraph.4.2.3.2}%
+\contentsline {paragraph}{\numberline {4.2.3.3}Liste de senssibilité}{14}{paragraph.4.2.3.3}%
+\contentsline {paragraph}{\numberline {4.2.3.4}Composants utilisé}{14}{paragraph.4.2.3.4}%
+\contentsline {subsubsection}{\numberline {4.2.4}Quatrième process}{15}{subsubsection.4.2.4}%
+\contentsline {paragraph}{\numberline {4.2.4.1}Code VHDL}{15}{paragraph.4.2.4.1}%
+\contentsline {paragraph}{\numberline {4.2.4.2}Bloc combinatoire ou mémorisant}{15}{paragraph.4.2.4.2}%
+\contentsline {paragraph}{\numberline {4.2.4.3}Liste de sensibilité}{15}{paragraph.4.2.4.3}%
+\contentsline {paragraph}{\numberline {4.2.4.4}Composants utilisé}{15}{paragraph.4.2.4.4}%
+\contentsline {subsection}{\numberline {4.3}Synthèse du contrôleur}{16}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Encodage binaire}{16}{subsubsection.4.3.1}%
+\contentsline {paragraph}{\numberline {4.3.1.1}Codage des états}{16}{paragraph.4.3.1.1}%
+\contentsline {paragraph}{\numberline {4.3.1.2}Report Area}{16}{paragraph.4.3.1.2}%
+\contentsline {paragraph}{\numberline {4.3.1.3}Report Delay}{16}{paragraph.4.3.1.3}%
+\contentsline {subsubsection}{\numberline {4.3.2}Encodage de Gray}{17}{subsubsection.4.3.2}%
+\contentsline {paragraph}{\numberline {4.3.2.1}Codage des états}{17}{paragraph.4.3.2.1}%
+\contentsline {paragraph}{\numberline {4.3.2.2}Report Area}{17}{paragraph.4.3.2.2}%
+\contentsline {paragraph}{\numberline {4.3.2.3}Report Delay}{17}{paragraph.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.3}Encodage OneHot}{18}{subsubsection.4.3.3}%
+\contentsline {paragraph}{\numberline {4.3.3.1}Codage des états}{18}{paragraph.4.3.3.1}%
+\contentsline {paragraph}{\numberline {4.3.3.2}Report Area}{18}{paragraph.4.3.3.2}%
+\contentsline {paragraph}{\numberline {4.3.3.3}Report Delay}{18}{paragraph.4.3.3.3}%
+\contentsline {subsection}{\numberline {4.4}Synthèse du compteur}{19}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Sans borner C}{19}{subsubsection.4.4.1}%
+\contentsline {paragraph}{\numberline {4.4.1.1}Report Area}{19}{paragraph.4.4.1.1}%
+\contentsline {paragraph}{\numberline {4.4.1.2}Report Delay}{19}{paragraph.4.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.4.2}Avec C borné}{19}{subsubsection.4.4.2}%
+\contentsline {paragraph}{\numberline {4.4.2.1}Report Area}{19}{paragraph.4.4.2.1}%
+\contentsline {paragraph}{\numberline {4.4.2.2}Report Delay}{19}{paragraph.4.4.2.2}%
