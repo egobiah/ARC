@@ -9,8 +9,11 @@ entity System is
 end System;
 
 architecture Struct of System is
-	component Count is
-		generic (threshold : natural);
+	component Count4 is
+		port(reset, clk, start: in std_logic; aboveth: out std_logic);
+	end component;
+	
+	component Count10 is
 		port(reset, clk, start: in std_logic; aboveth: out std_logic);
 	end component;
 	
@@ -22,13 +25,9 @@ architecture Struct of System is
 	Signal foodOut, link_ab_reset, link_ab_search, link_rest, link_search : std_logic := '0';
 begin
 -- Count1
-	 C1: Count 
-	 generic map(4) 
-	 port map(reset,clk,link_rest,link_ab_reset);
+	 C1: Count4  port map(reset,clk,link_rest,link_ab_reset);
 -- Count2	 
-	 C2: Count 
-	 generic map(10) 
-	 port map(reset,clk,link_search,link_ab_search);
+	 C2: Count10  port map(reset,clk,link_search,link_ab_search);
 -- Robot	 
 	 R: Robot port map(reset, clk, athome, findfood, lostfood, closetofood, success, link_ab_reset, link_ab_search, scantimeup, link_rest, link_search, foodOut);
 	 
