@@ -31,25 +31,25 @@ architecture test1 of testRobot is
 	rest, search, food: out std_logic);
   end component;
   signal r, clk, ah, f, l, c, s, arest, asearch,scan, re, se, fo : std_logic := '0';
-  signal reBin, seBin, foBin : std_logic := 0;
-  signal reGray, seGray, foGray : std_logic := 0;
-  signal reHot, seHot, foHot : std_logic := 0;
+  signal reBin, seBin, foBin : std_logic := '0';
+  signal reGray, seGray, foGray : std_logic := '0';
+  signal reHot, seHot, foHot : std_logic := '0';
     -- psl default clock is rising_edge(clk);
 	
 	-- psl property RestAlwaysTheSame is always (
-	--(re = '0' or reBin = '0' or reGray = '0' or reHot = '0') ->(re = '0' and reBin = '0' and reGray = '0' and reHot = '0');
-	-- and (re = '1' or reBin = '1' or reGray = '1' or reHot = '1') ->(re = '1' and reBin = '1' and reGray = '1' and reHot = '1'))
+	--(re = '0' or reBin = '0' or reGray = '0' or reHot = '0') ->(re = '0' and reBin = '0' and reGray = '0' and reHot = '0')
+	-- and (re = '1' or reBin = '1' or reGray = '1' or reHot = '1') ->(re = '1' and reBin = '1' and reGray = '1' and reHot = '1'));
 	-- psl assert RestAlwaysTheSame;
 	
 	-- psl property SearchAlwaysTheSame is always (
-	--(se = '0' or seBin = '0' or seGray = '0' or seHot = '0') ->(se = '0' and seBin = '0' and seGray = '0' and seHot = '0');
-	-- and (se = '1' or seBin = '1' or seGray = '1' or seHot = '1') ->(se = '1' and seBin = '1' and seGray = '1' and seHot = '1'))
+	--(se = '0' or seBin = '0' or seGray = '0' or seHot = '0') ->(se = '0' and seBin = '0' and seGray = '0' and seHot = '0')
+	-- and (se = '1' or seBin = '1' or seGray = '1' or seHot = '1') ->(se = '1' and seBin = '1' and seGray = '1' and seHot = '1'));
 	-- psl assert SearchAlwaysTheSame;
 	
 	-- psl property FoodAlwaysTheSame is always (
-	--(fo = '0' or foBin = '0' or foGray = '0' or foHot = '0') ->(fo = '0' and foBin = '0' and foGray = '0' and foHot = '0');
-	-- and (fo = '1' or foBin = '1' or foGray = '1' or foHot = '1') ->(fo = '1' and foBin = '1' and foGray = '1' and foHot = '1'))
-	-- psl FoodAlwaysTheSame p1;
+	--(fo = '0' or foBin = '0' or foGray = '0' or foHot = '0') ->(fo = '0' and foBin = '0' and foGray = '0' and foHot = '0')
+	-- and (fo = '1' or foBin = '1' or foGray = '1' or foHot = '1') ->(fo = '1' and foBin = '1' and foGray = '1' and foHot = '1'));
+	-- psl assert FoodAlwaysTheSame ;
 	
 	
 

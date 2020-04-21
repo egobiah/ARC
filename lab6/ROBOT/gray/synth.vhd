@@ -43,7 +43,7 @@ architecture automate_robotGray of RobotGray is
 	-- psl property p2 is always (search = '1' ->  (abovesearchth = '1') before! (state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0') );
 	-- psl assert p2;
 	
-	-- psl property p3 is always ((state_3 = '0' and state_2 = '1' and state_1 = '0' and state_0 = '') -> 
+	-- psl property p3 is always ((state_3 = '0' and state_2 = '1' and state_1 = '0' and state_0 = '0') -> 
 	-- (state_3 = '0' and state_2 = '1' and state_1 = '0' and state_0 = '0') before! rest = '1');
 	-- psl assert p3;
 	

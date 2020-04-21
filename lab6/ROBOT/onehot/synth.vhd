@@ -48,23 +48,22 @@ architecture automate_robotHot of RobotHot is
 	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	) );
 	-- psl assert p2;
 	
-	-- psl property p3 is always (-- (state_0 = '0' and state_1 = '0' and state_2 = '0' and state_3 = '0' and state_4 = '0' 
+	-- psl property p3 is always ( (state_0 = '0' and state_1 = '0' and state_2 = '0' and state_3 = '0' and state_4 = '0' 
 	--and state_5 = '0' and nx767 = '0'  and state_7 = '0' and nx772 = '1'	) -> 
 	-- (state_0 = '0' and state_1 = '0' and state_2 = '0' and state_3 = '0' and state_4 = '0' 
 	--and state_5 = '0' and nx767 = '1'  and state_7 = '1' and nx772 = '1'	) before! rest = '1');
 	-- psl assert p3;
 	
-	-- psl property p4 is  
-
-	--  always { state = (state_0 = '0' and state_1 = '0' and state_2 = '1' and state_3 = '0' and state_4 = '0' 
-	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	) and abovesearchth = '0';
-	-- (abovesearchth = '0' and findfood = '0' and not(state_0 = '1') )[*]; 
-	-- (abovesearchth ='0' and findfood = '1' and not(state_0 = '1') ; 
-	-- (abovesearchth = '0' and lostfood = '0' and closetofood = '0' and not(state_0 = '1')[*];
-	-- (abovesearchth = '0' and lostfood = '1' and not(state_0 = '1') ; 
-	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '0' and not(state_0 = '1')[*];
-	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state_0 = '1') } |=> {(state_0 = '0' and state_1 = '0' and state_2 = '1' and state_3 = '0' and state_4 = '0' 
-	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	)} ;
+	-- psl property p4 is 
+	--	always ({ (state_0 = '0' and state_1 = '0' and state_2 = '1' and state_3 = '0' and state_4 = '0' 
+	-- and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	 and abovesearchth = '0');
+	-- ((abovesearchth = '0' and findfood = '0' and not(state_0 = '1') )[*]); 
+	-- (abovesearchth ='0' and findfood = '1' and not(state_0 = '1')) ; 
+	-- (abovesearchth = '0' and lostfood = '0' and closetofood = '0' and not(state_0 = '1')[*]);
+	-- (abovesearchth = '0' and lostfood = '1' and not(state_0 = '1')) ; 
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '0' and not(state_0 = '1')[*]);
+	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state_0 = '1')) } |=> {(state_0 = '0' and state_1 = '0' and state_2 = '1' and state_3 = '0' and state_4 = '0' 
+	--and state_5 = '0' and nx767 = '1'  and state_7 = '0' and nx772 = '1'	)}) ;
 	-- psl assert p4;
 	
 

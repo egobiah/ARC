@@ -44,13 +44,14 @@ architecture automate_robotBin of RobotBin is
 	
 	-- psl property p2 is always (search = '1' ->  (abovesearchth = '1') before! ( state_2 = '1' and state_1 = '0' and state_0 = '0') );
 	-- psl assert p2;
-	
-	-- psl property p3 is always ((state_2 = '1' and state_1 = '1' and state_0 = '0') -> ( and state_2 = '1' and state_1 = '1' and state_0 = '1') before! rest = '1');
+	-- psl property p3 is always ((state_2 = '1' and state_1 = '1' and state_0 = '0') -> 
+	-- (state_2 = '1' and state_1 = '1' and state_0 = '1') before! rest = '1');
 	-- psl assert p3;
 	
+	
+	
 	-- psl property p4 is  
-
-	--  always { state = (state_2 = '0' and state_1 = '1' and state_0 = '0') and abovesearchth = '0';
+	--  always { (state_2 = '0' and state_1 = '1' and state_0 = '0') and abovesearchth = '0';
 	-- (abovesearchth = '0' and findfood = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0') )[*]; 
 	-- (abovesearchth ='0' and findfood = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0')) ; 
 	-- (abovesearchth = '0' and lostfood = '0' and closetofood = '0' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0'))[*];
@@ -59,8 +60,10 @@ architecture automate_robotBin of RobotBin is
 	-- (abovesearchth = '0' and findfood = '0' and scantimeup = '1' and not(state_3 = '0' and state_2 = '0' and state_1 = '1' and state_0 = '0')) } |=> {(state_2 = '0' and state_1 = '1' and state_0 = '0')} ;
 	-- psl assert p4;
 	
+	
 
-	-- psl property p5 is always ( {(state_2 = '0' and state_1 = '0' and state_0 = '01')} |=> {[*] ; (state_2 = '0' and state_1 = '1' and state_0 = '0') });
+	-- psl property p5 is
+	--	always ( {(state_2 = '0' and state_1 = '0' and state_0 = '1')} |=> {[*] ; (state_2 = '0' and state_1 = '1' and state_0 = '0') }) ;
 	-- psl assert p5;
 	
 
